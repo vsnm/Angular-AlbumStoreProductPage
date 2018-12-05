@@ -7,6 +7,7 @@ import {Album} from '../album';
   templateUrl: './product-tracklisting.component.html',
   styleUrls: ['./product-tracklisting.component.css']
 })
+
 export class ProductTracklistingComponent implements OnInit {
 
   albumInfo:Album;
@@ -14,7 +15,5 @@ export class ProductTracklistingComponent implements OnInit {
 
   ngOnInit() {
 		this._productService.getAlbum(1).subscribe(response =>this.albumInfo = response);
-
-  }
 	}
 }
