@@ -18,9 +18,9 @@ export class ProductService {
   	return this._http.get(this._albumUrl).map((response)=> <Album>response.json());
   }
 
-  getProducts():Observable<Product>{
+  getProducts():Observable<Product[]>{
   	console.log('in service')
-  	return this._http.get(this._productsUrl).map((response) => <Product>response.json())
+  	return this._http.get(this._productsUrl).map(response => <Product[]>response.json());
   }
 
 }
